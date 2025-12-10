@@ -1,17 +1,11 @@
-public class rectangle {
+public class Rectangle {
     private double x;
     private double y;
 
-    public Rectangle(double width, double height) {
-        if (width <= 0 || height <= 0) {
+    public Rectangle(double x, double y) {
+        if (x <= 0 || y <= 0) {
             throw new RuntimeException("There is no figure with such parameters.");
         }
-        this.width = width;
-        this.height = height;
-    }
-
-
-    public rectangle(double x, double y) {
         this.x = x;
         this.y = y;
     }
@@ -24,11 +18,11 @@ public class rectangle {
         return y;
     }
 
-    public double square() {
+    public double getArea() {
         return x * y;
     }
 
     public double perimeter() {
-        return 2 * (x + y);
+        return 2 * (x + y);  // Исправлено: * вместо ×
     }
 }

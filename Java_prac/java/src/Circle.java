@@ -1,5 +1,4 @@
-
-public class circle {
+public class Circle {
     private double radius;
 
     public Circle(double radius) {
@@ -9,19 +8,15 @@ public class circle {
         this.radius = radius;
     }
 
-    public circle(double radius) {
-        this.radius = radius;
-    }
-
     public double getRadius() {
         return radius;
     }
 
-    public double square(double radius) {
-        return 3.14 * radius * radius;
+    public double getArea() {
+        return Math.PI * radius * radius;
     }
 
     public double perimeter() {
-        return 2 * 3.14 * radius;
+        return 2 * Math.PI * radius;
     }
 }

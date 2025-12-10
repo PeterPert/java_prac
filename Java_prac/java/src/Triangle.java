@@ -1,18 +1,13 @@
-public class triangle {
+public class Triangle {
     private double a;
     private double b;
     private double c;
 
     public Triangle(double a, double b, double c) {
-        if (!isValid(a, b, c)) {
+        if (!((a + b > c) && (a + c > b) && (b + c > a) &&
+                (a > 0) && (b > 0) && (c > 0))) {
             throw new RuntimeException("There is no figure with such parameters.");
         }
-        this.a = a;
-        this.b = b;
-        this.c = c;
-    }
-
-    public triangle(double a, double b, double c) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -35,10 +30,7 @@ public class triangle {
                 (a > 0) && (b > 0) && (c > 0);
     }
 
-    public double square() {
-        if (!isValid()) {
-            return 0;  // или бросить исключение
-        }
+    public double getArea() {
         double p = (a + b + c) / 2.0;
         return Math.sqrt(p * (p - a) * (p - b) * (p - c));
     }
